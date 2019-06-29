@@ -9,7 +9,5 @@ auto color paint for comic
 用训练好后的模型对黑白本子上色效果如下(gray img non-resize predict)：
 原图original：![黑白本子](/images/1.jpg)
 预测predict：![自动上色后](/images/combine_1.jpg)
-原图original：![黑白本子](/images/5.jpg)
-预测predict：![自动上色后](/images/combine_5.jpg)
 原图original：![黑白本子](/images/9.jpg)
 预测predict：![自动上色后](/images/combine_9.jpg)
