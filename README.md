@@ -1,6 +1,7 @@
 auto color paint for comic using pix2pix and WDSR(keras),based on user:wmylxmj job
 https://github.com/wmylxmj/Pix2Pix-Keras
 https://github.com/wmylxmj/Anime-Super-Resolution
+感谢大佬的开源项目
 漫画、动漫壁纸、本子自动上色，目前先训练了本子的自动上色，时长12个钟，模型效果还行，起码比黑白的好看2333
 训练example show:
 左边灰度(gray) 中间预测(predict) 右边原图(original)
@@ -21,3 +22,8 @@ how to use:
 项目目录(Directory)：
 <br/>./weights:存放训练后的上色模型以及SR模型，包含wdsr-b-32-x4.h5、discriminator_weights.h5(可省略)、generator_weights.h5
 <br/>./datasets/OriginalImages:存放用于训练的彩色图片
+<br/>pix2pix.py:pix2pix model file
+<br/>WDSR.py:wdsr model file
+<br/>utils.py: settings of loading data 设置加载数据的方法等
+<br/>prepare.py: pre-step before you start train 训练前的预处理数据
+<br/>predict.py: using trained model get colored img 得到上色后图片
