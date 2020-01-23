@@ -15,9 +15,9 @@ https://github.com/wmylxmj/Anime-Super-Resolution
 预测predict：![自动上色后](/images/combine_9.jpg)
 
 how to use:
-1.train model 训练自己需要的上色模型:just see wmylxmj job：https://github.com/wmylxmj/Pix2Pix-Keras
-2.get colored_img 得到上色后图片：by running code predict.py 
+<br/>1.train model 训练自己需要的上色模型:just see wmylxmj job：https://github.com/wmylxmj/Pix2Pix-Keras
+<br/>2.get colored_img 得到上色后图片：by running code predict.py 
 
 项目目录(Directory)：
-./weights:存放训练后的上色模型以及SR模型，包含wdsr-b-32-x4.h5、discriminator_weights.h5(可省略)、generator_weights.h5
-./datasets/OriginalImages:存放用于训练的彩色图片
+<br/>./weights:存放训练后的上色模型以及SR模型，包含wdsr-b-32-x4.h5、discriminator_weights.h5(可省略)、generator_weights.h5
+<br/>./datasets/OriginalImages:存放用于训练的彩色图片
