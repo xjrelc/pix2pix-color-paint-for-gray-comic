@@ -25,3 +25,7 @@ how to use:
 <br/>utils.py: settings of loading data 设置加载数据的方法等
 <br/>prepare.py: pre-step before you start train 训练前的预处理数据
 <br/>predict.py: using trained model get colored img 得到上色后图片
+
+使用Mo平台部署在线测试(Deploy test online):支持javascript、curl、python
+可使用API测试效果,调用API传入图片，返回上色后图片的base64字符串，转成img即可
+
