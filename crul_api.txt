@@ -1,0 +1,3 @@
+img_file_name=`curl -F 'file=@<img_path>' https://momodel.cn/pyapi/file/temp_api_file | jq -r '.temp_file_name'`
+
+curl --header "Content-Type: application/json" --request POST --data '{"app": {"input": {"img": {"val": "'${img_file_name}'", "type": "img"}}, "output": {"str": {"type": "str"}}}, "version": "dev"}' https://momodel.cn/pyapi/apps/run/5e267a93d13fba905e3323be

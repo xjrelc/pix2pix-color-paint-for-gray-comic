@@ -1,0 +1,34 @@
+async function fetchAsync() {
+  try {
+    // 先将文件上传至文件存储（此存储为临时用，一小时后文件即会被删除）
+    const fs = require('fs');
+    const FormData = require('form-data');
+    const fetch = require('node-fetch');
+    let uploadUrl = 'https://momodel.cn/pyapi/file/temp_api_file'
+    let imgFormData = new FormData()
+    imgFormData.append('file', await fs.createReadStream('<img_path>', "utf8"))
+    let imgData = await fetch(uploadUrl, {method: 'POST', body: imgFormData})
+    let imgFileName = (await imgData.json()).temp_file_name
+    
+    let url = 'https://momodel.cn/pyapi/apps/run/5e267a93d13fba905e3323be'
+    let input = {"img": {"val": imgFileName, "type": "img"}}
+    let output = {"str": {"type": "str"}}
+    let appVersion = "dev"
+    let payload = JSON.stringify({"app": {"input": input, "output": output}, 'version': appVersion})
+    const otherPram = {
+      headers: {
+        "content-type":"application/json; charset=UTF-8"
+      },
+      body: payload,
+      method: "POST"
+    }
+    let data = await fetch(url, otherPram)
+    let jsonData = await data.json()
+    console.log(jsonData)
+  } catch (e) {
+    console.log(e)
+  }
+}
+(async function() {
+  await fetchAsync();
+})()
