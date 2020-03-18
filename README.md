@@ -25,6 +25,9 @@ how to use:
 <br/>utils.py: settings of loading data 设置加载数据的方法等
 <br/>prepare.py: pre-step before you start train 训练前的预处理数据
 <br/>predict.py: using trained model get colored img 得到上色后图片
+<br/>test.py: using api of my trained model get colored img 调用我训练的模型API来上色图片测试
+<br/>js_api.txt javascript调用本项目api方法
+<br/>crul_api.txt crul调用本项目api方法
 
 项目API使用:
 <br/>使用Mo平台部署在线测试(Deploy test online):支持javascript、curl、python
