@@ -26,6 +26,8 @@ how to use:
 <br/>prepare.py: pre-step before you start train 训练前的预处理数据
 <br/>predict.py: using trained model get colored img 得到上色后图片
 
-使用Mo平台部署在线测试(Deploy test online):支持javascript、curl、python
-可使用API测试效果,调用API传入图片，返回上色后图片的base64字符串，转成img即可
-
+项目API使用:
+<br/>使用Mo平台部署在线测试(Deploy test online):支持javascript、curl、python
+<br/>流程：调用API初始化图片，返回上色后图片的base64字符串，使用函数转成img另存本地
+![step1](/images/test_step1.PNG)
+![step2](/images/test_step2.PNG)
